@@ -48,6 +48,10 @@ public class Player {
 		return assists;
 	}
 	
+	public int getPoints() {
+		return goals + assists;
+	}
+	
 	public int getPenalties() {
 		return penalties;
 	}

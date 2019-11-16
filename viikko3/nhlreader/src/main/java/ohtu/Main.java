@@ -1,6 +1,8 @@
 package ohtu;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Request;
@@ -20,9 +22,9 @@ public class Main {
 		Gson mapper = new Gson();
 		Player[] players = mapper.fromJson(bodyText, Player[].class);
 		
-		System.out.println("Oliot:");
-		for (Player player : players) {
-		    System.out.println(player);
-		}
+		Arrays.stream(players).filter(p -> p.getNationality().equals("FIN"))
+				.sorted(Comparator.comparing(Player::getPoints).reversed())
+				.forEach(p -> System.out.println(String.join(" ", p.getName(), p.getTeam(),
+						"" + p.getGoals(), "+", "" + p.getAssists(), "=", "" + p.getPoints())));
 	}
 }
