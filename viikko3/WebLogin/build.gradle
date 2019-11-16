@@ -34,7 +34,10 @@ dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version:seleniumVersion
     compile group: 'org.seleniumhq.selenium', name: 'selenium-api', version:seleniumVersion
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:seleniumVersion   
-    compile group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: '2.33.0'
+    compile group: 'org.seleniumhq.selenium', name: 'htmlunit-driver', version: '2.33.0' 
+    compile ("io.github.bonigarcia:webdrivermanager:3.7.1") {
+        exclude group: 'org.seleniumhq.selenium'
+    }
 }
 
 test {
