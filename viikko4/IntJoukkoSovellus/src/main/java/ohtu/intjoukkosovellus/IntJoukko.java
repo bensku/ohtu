@@ -118,7 +118,7 @@ public class IntJoukko {
 
     }
 
-    public int mahtavuus() {
+    public int koko() {
         return alkioidenLkm;
     }
 
@@ -178,7 +178,7 @@ public class IntJoukko {
 
     }
     
-    public static IntJoukko erotus ( IntJoukko a, IntJoukko b) {
+    public static IntJoukko erotus(IntJoukko a, IntJoukko b) {
         IntJoukko z = new IntJoukko();
         int[] aTaulu = a.toIntArray();
         int[] bTaulu = b.toIntArray();
