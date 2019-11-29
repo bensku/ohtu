@@ -28,10 +28,10 @@ public class GraafinenLaskin extends Pane {
         napit.getChildren().addAll(plus, miinus, nollaa, undo);
                  
         Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(tuloskentta, syotekentta, plus, miinus, nollaa, undo);
-        plus.setOnAction(kasittelija);
-        miinus.setOnAction(kasittelija);
-        nollaa.setOnAction(kasittelija);
-        undo.setOnAction(kasittelija);
+        plus.setOnAction(kasittelija::plus);
+        miinus.setOnAction(kasittelija::miinus);
+        nollaa.setOnAction(kasittelija::nollaa);
+        undo.setOnAction(kasittelija::peru);
         
         layout.getChildren().addAll(tuloskentta, syotekentta, napit);   
         
