@@ -1,0 +1,20 @@
+Start, Stop, Continue, More of, Less of Wheel on tekniikka nopeisiin
+(alle 25 minuuttia) retrospektiiveihin. Tiimi jakaa siinä jo tehdyt
+asiat hyviin ja huonoihin neliportaisella asteikolla. Huonosti toimineet
+lopetetaan (stop) tai niitä vähennetään (less of) ongelmien laadusta
+riippuen. Hyvin toimineita asioita jatketaan (continue) tai niitä lisätään
+tulevaisuudessa (more of).  Myös uusia asioita saatetaan ehdottaa (start).
+
+Asiat kerätään ympyrään, joka on jaettu neljään segmenttiin (wheel), jonka
+jälkeen niistä keskustellaan. Ympyrä auttaa havainnollistamaan, kuinka
+hyvin esim. sprintti on kokonaisuutena sujunut.
+
+Glad, Sad, Mad on hitaampi tekniikka; siihen tarvitaan noin tunti. Se
+perustuu tunnistettujen ongelmien priorisointiin äänestämällä; listaa
+ongelmista käydään retrospektiivin aikana läpi niin paljon kuin mahdollista,
+ja jäljelle jääneitä ongelmia ei käsitellä.
+
+Palautetta kerätään paperilapuilla, yksi asia per lappu. Palaute tiimin
+toiminnasta voi olla positiivista (glad) tai negatiivista (sad). Lisäksi
+kerätään tietoa tiimin ulkopuolisista ongelmista (mad). Kaikista lapuista,
+mukaan lukien positiivisesta palautteesta, äänestetään tärkeimmät.
