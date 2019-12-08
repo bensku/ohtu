@@ -11,10 +11,15 @@ public class Main {
 
         Statistics stats = new Statistics(new PlayerReaderImpl(url));
           
-        Matcher m = new And( new HasAtLeast(5, "goals"),
-                             new HasAtLeast(5, "assists"),
-                             new PlaysIn("PHI")
-        );
+        Matcher m = QueryBuilder.oneOf(
+        	    QueryBuilder.begin().playsIn("PHI")
+        	        .hasAtLeast(10, "assists")
+        	        .hasFewerThan(8, "goals").build(),
+
+        	    QueryBuilder.begin().playsIn("EDM")
+        	        .hasAtLeast(20, "points").build()
+        	);
+
         
         for (Player player : stats.matches(m)) {
             System.out.println(player);
