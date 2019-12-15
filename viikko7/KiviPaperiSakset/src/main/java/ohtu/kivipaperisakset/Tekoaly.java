@@ -1,6 +1,6 @@
 package ohtu.kivipaperisakset;
 
-public class Tekoaly {
+public class Tekoaly implements Pelaaja {
 
     int siirto;
 
@@ -8,20 +8,22 @@ public class Tekoaly {
         siirto = 0;
     }
 
-    public String annaSiirto() {
+    @Override
+    public Siirto annaSiirto() {
         siirto++;
         siirto = siirto % 3;
 
         if (siirto == 0) {
-            return "k";
+            return Siirto.KIVI;
         } else if (siirto == 1) {
-            return "p";
+            return Siirto.PAPERI;
         } else {
-            return "s";
+            return Siirto.SAKSET;
         }
     }
 
-    void asetaSiirto(String ekanSiirto) {
+    @Override
+    public void asetaSiirto(Pelaaja toinen, Siirto ekanSiirto) {
         // ei tehdä mitään 
     }
 }
