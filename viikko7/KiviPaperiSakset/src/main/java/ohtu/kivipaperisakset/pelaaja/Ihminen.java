@@ -1,14 +1,16 @@
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.pelaaja;
 
 import java.io.PrintStream;
 import java.util.Scanner;
 
-public class OikeaPelaaja implements Pelaaja {
+import ohtu.kivipaperisakset.Siirto;
+
+class Ihminen implements Pelaaja {
 
     private final Scanner in;
     private final PrintStream out;
     
-    public OikeaPelaaja(Scanner in, PrintStream out) {
+    public Ihminen(Scanner in, PrintStream out) {
         this.in = in;
         this.out = out;
     }
@@ -21,7 +23,7 @@ public class OikeaPelaaja implements Pelaaja {
 
     @Override
     public void asetaSiirto(Pelaaja toinen, Siirto siirto) {
-        if (!(toinen instanceof OikeaPelaaja)) {
+        if (!(toinen instanceof Ihminen)) {
             out.println("Toinen pelaaja valitsi: " + siirto.name().toLowerCase());
         }
     }

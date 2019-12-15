@@ -1,6 +1,8 @@
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.pelaaja;
 
-public class Tekoaly implements Pelaaja {
+import ohtu.kivipaperisakset.Siirto;
+
+class Tekoaly implements Pelaaja {
 
     int siirto;
 

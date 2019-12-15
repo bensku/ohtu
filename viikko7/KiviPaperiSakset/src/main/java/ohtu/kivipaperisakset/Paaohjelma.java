@@ -2,6 +2,10 @@ package ohtu.kivipaperisakset;
 
 import java.util.Scanner;
 
+import ohtu.kivipaperisakset.pelaaja.Pelaaja;
+import ohtu.kivipaperisakset.pelaaja.Vaikeus;
+import ohtu.kivipaperisakset.peli.Peli;
+
 public class Paaohjelma {
 
     private static final Scanner scanner = new Scanner(System.in);
@@ -17,22 +21,20 @@ public class Paaohjelma {
 
             String vastaus = scanner.nextLine();
             
-            Scanner scanner = new Scanner(System.in);
-            Pelaaja eka = new OikeaPelaaja(scanner, System.out);
+            System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
+            
+            Pelaaja eka = Pelaaja.ihminen(scanner, System.out);
             Pelaaja toka;
             if (vastaus.endsWith("a")) {
-                System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-                toka = new OikeaPelaaja(scanner, System.out);
+                toka = Pelaaja.ihminen(scanner, System.out);
             } else if (vastaus.endsWith("b")) {
-                System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-                toka = new Tekoaly();
+                toka = Pelaaja.tekoaly(Vaikeus.HELPPO);
             } else if (vastaus.endsWith("c")) {
-                System.out.println("peli loppuu kun pelaaja antaa virheellisen siirron eli jonkun muun kuin k, p tai s");
-                toka = new TekoalyParannettu(20);
+                toka = Pelaaja.tekoaly(Vaikeus.VAIKEA);
             } else {
                 break;
             }
-            KPSPeli peli = new KPSPeli(eka, toka);
+            Peli peli = Peli.kiviPaperiSakset(eka, toka);
             peli.pelaa();
         }
 

@@ -1,9 +1,11 @@
 
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.pelaaja;
+
+import ohtu.kivipaperisakset.Siirto;
 
 // "Muistava tekoäly"
 
-public class TekoalyParannettu implements Pelaaja {
+class TekoalyParannettu implements Pelaaja {
 
     private Siirto[] muisti;
     private int vapaaMuistiIndeksi;

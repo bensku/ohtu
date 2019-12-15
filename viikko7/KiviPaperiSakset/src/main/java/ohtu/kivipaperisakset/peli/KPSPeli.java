@@ -1,16 +1,21 @@
-package ohtu.kivipaperisakset;
+package ohtu.kivipaperisakset.peli;
 
-public class KPSPeli {
+import ohtu.kivipaperisakset.Siirto;
+import ohtu.kivipaperisakset.Tuomari;
+import ohtu.kivipaperisakset.pelaaja.Pelaaja;
+
+class KPSPeli implements Peli {
 
     // Pelajat (ihmisiä/tekoälyjä)
     private final Pelaaja eka;
     private final Pelaaja toka;
     
-    public KPSPeli(Pelaaja eka, Pelaaja toka) {
+    KPSPeli(Pelaaja eka, Pelaaja toka) {
         this.eka = eka;
         this.toka = toka;
     }
     
+    @Override
     public void pelaa() {
         Tuomari tuomari = new Tuomari();
         
